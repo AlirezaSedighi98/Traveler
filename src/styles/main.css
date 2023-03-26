@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("./navbar.css");
+
+body {
+  @apply text-base text-gray-200 bg-slate-700;
+}
+.customContainer {
+  @apply bg-stone-900 px-[70px] flex justify-start;
+}
