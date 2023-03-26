@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Outlet } from "react-router";
+import Navbar from "./layout/navbar/Navbar";
 
 function App() {
   return (
     <>
-      Starting Project...
+      <Navbar />
+      <Outlet />
     </>
   );
 }
