@@ -7,7 +7,7 @@ const Navbar = () => {
   const rightLinks = navLinks.slice(Math.ceil(navLinks.length / 2));
 
   return (
-    <div style={{ height: 80 }} className="navbarContainer">
+    <nav className="navbarContainer">
       <div className="navLinks">
         {leftLinks.map((item, index) => (
           <NavLink className="links" key={index} to={item.link}>
@@ -15,17 +15,18 @@ const Navbar = () => {
           </NavLink>
         ))}
       </div>
-      <div className="logoImage">
+      <NavLink to={"/"} className="logoImage">
         <img className="h-full" src="./images/logos/webLogo.png" alt="logo" />
-      </div>
+        <h1 className="navHeader">Travler</h1>
+      </NavLink>  
       <div className="navLinks">
         {rightLinks.map((item, index) => (
           <NavLink className="links" key={index} to={item.link}>
-            {item.title}
+            {item.title} 
           </NavLink>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
