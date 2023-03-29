@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "./navLinks";
 import { IconButton } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Button from "@mui/material/Button";
+import DrawerMenu from "./DrawerMenu";
 
 const Navbar = () => {
+  const [drawerStatus, setDrawerStatus] = useState(false);
+
   const leftLinks = navLinks.slice(0, Math.ceil(navLinks.length / 2));
   const rightLinks = navLinks.slice(Math.ceil(navLinks.length / 2));
 
@@ -23,8 +26,8 @@ const Navbar = () => {
         <h1 className="navHeader">Travler</h1>
       </NavLink>
       <div className="md:hidden">
-        <IconButton onClick={() => {}}>
-          <MenuRoundedIcon color="primary" fontSize="large" />
+        <IconButton onClick={() => setDrawerStatus(true)}>
+          <MenuRoundedIcon color="primary" />
         </IconButton>
       </div>
       <div className="navLinks">
@@ -34,6 +37,7 @@ const Navbar = () => {
           </NavLink>
         ))}
       </div>
+      <DrawerMenu open={drawerStatus} onClose={() => setDrawerStatus(false)} />
     </nav>
   );
 };
