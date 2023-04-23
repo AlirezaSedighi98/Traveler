@@ -9,7 +9,12 @@ const DrawerMenu = (props: DrawerProps) => {
       <nav className="drawer">
         {navLinks.map((item, index) => {
           return (
-            <NavLink to={item.link} className='text-center' key={index}>
+            <NavLink
+              role="navigationLink"
+              to={item.link}
+              className="text-center"
+              key={index}
+            >
               {item.title}
             </NavLink>
           );

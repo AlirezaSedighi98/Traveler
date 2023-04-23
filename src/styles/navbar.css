@@ -3,7 +3,7 @@
 }
 
 .logoImage {
-  @apply h-full flex items-center justify-center mr-auto;
+  @apply h-full flex justify-center mr-auto md:m-0 items-center;
 }
 
 .navLinks {

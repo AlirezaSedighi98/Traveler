@@ -3,25 +3,24 @@ import { NavLink } from "react-router-dom";
 import { navLinks } from "./navLinks";
 import { IconButton } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import Button from "@mui/material/Button";
 import DrawerMenu from "./DrawerMenu";
 
 const Navbar = () => {
   const [drawerStatus, setDrawerStatus] = useState(false);
 
-  const leftLinks = navLinks.slice(0, Math.ceil(navLinks.length / 2));
-  const rightLinks = navLinks.slice(Math.ceil(navLinks.length / 2));
+  const leftSideLinks = navLinks.slice(0, Math.ceil(navLinks.length / 2));
+  const rightSideLinks = navLinks.slice(Math.ceil(navLinks.length / 2));
 
   return (
     <nav className="navbarContainer">
       <div className="navLinks">
-        {leftLinks.map((item, index) => (
-          <NavLink className="links" key={index} to={item.link}>
+        {leftSideLinks.map((item, index) => (
+          <NavLink role="navigationLink" className="links" key={index} to={item.link}>
             {item.title}
           </NavLink>
         ))}
       </div>
-      <NavLink to={"/"} className="logoImage">
+      <NavLink role="navigationLink" to={"/"} className="logoImage">
         <img className="h-full" src="./images/logos/webLogo.png" alt="logo" />
         <h1 className="navHeader">Travler</h1>
       </NavLink>
@@ -31,8 +30,8 @@ const Navbar = () => {
         </IconButton>
       </div>
       <div className="navLinks">
-        {rightLinks.map((item, index) => (
-          <NavLink className="links" key={index} to={item.link}>
+        {rightSideLinks.map((item, index) => (
+          <NavLink role="navigationLink" className="links" key={index} to={item.link}>
             {item.title}
           </NavLink>
         ))}
