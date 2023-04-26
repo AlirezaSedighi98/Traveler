@@ -1,5 +1,5 @@
 .navbarContainer {
-  @apply items-center sticky top-0 h-[80px] md:px-[70px] px-5 flex md:grid py-[15px] bg-gradient-to-b from-black to-transparent md:grid-cols-[45%_10%_45%] grid-rows-1;
+  @apply items-center absolute top-0 z-10 w-full h-[80px] md:px-[70px] px-5 flex md:grid py-[15px] bg-gradient-to-b from-black to-transparent md:grid-cols-[45%_10%_45%] grid-rows-1;
 }
 
 .logoImage {

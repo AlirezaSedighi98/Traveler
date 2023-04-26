@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("./navbar.css");
+@import url("./carousel.css");
 
 body {
   @apply text-base text-gray-200 bg-slate-700;
